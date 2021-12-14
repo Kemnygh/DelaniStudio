@@ -83,6 +83,7 @@ h1 span{
 /* About us*/
 #about-us{
   position: relative;
+  height: 300px;
 }
 
 .abt-title{
@@ -95,5 +96,16 @@ h1 span{
   position: absolute;
   text-align: center;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%,0%);
+  margin-bottom: 30%;
+
+}
+/* Services*/
+#services{
+  background-image: url("../images/backgrounds/s_image.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  margin-top: 30px;
 }
