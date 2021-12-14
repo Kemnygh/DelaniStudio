@@ -1,6 +1,6 @@
 
 
-.main{
+#main{
   background-image: url("../images/backgrounds/h_img.jpg");
   background-color: #cccccc;
   height:1200px;
@@ -8,6 +8,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.border-container{
+  position: absolute;
+  height:1100px;
+  width: 95%;
+  border: 4px solid white;
+  left: 2.5%;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .componets{
@@ -21,7 +30,7 @@
 
 .mouse-click{
   position: absolute;
-  top: 94%;
+  top: 90%;
   left: 50%;
   transform: translate(-94%, -50%);
 }
@@ -29,6 +38,10 @@
 .greeting{
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.nav{
+  margin-right: 2.5%;
 }
 
 .nav-link{
@@ -44,14 +57,12 @@
 }
 
 .tagline{
-  position: absolute;
-  /* display: none; */
-  left: 0%;
-  top: 63%;
-  color: none;
+   color: none;
   background-color: white;
   padding: 5px 20px 5px 20px;
   border-radius: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'Comfortaa', cursive;
 }
 
 h1 span{
