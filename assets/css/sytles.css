@@ -19,7 +19,7 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Navigation Bar */
+/* Navigation Bar------------------------------------------------------ */
 .nav{
   margin-right: 2.5%;
 }
@@ -33,7 +33,7 @@
 }
 
 
-/* Main page content*/
+/* Main page content------------------------------------------------------*/
 .componets{
   text-align: center;
   position: absolute;
@@ -101,7 +101,7 @@ h1 span{
 
 }
 
-/* Services*/
+/* Services---------------------------------------------------------------*/
 #sevices{
   position: relative;
 }
@@ -149,10 +149,10 @@ h1 span{
   margin-bottom: 10px;
 }
 
-/* Portfolio*/
+/* Portfolio------------------------------------------------------*/
 
 #portfolio{
-   height: 600px;
+   /* height: 600px; */
    align-items: center;
 }
 
@@ -206,4 +206,38 @@ h1 span{
 
 .giraffe{
   filter: brightness(20%);
+}
+
+/* Contact Us------------------------------------------------------*/
+
+#contact{
+  margin-top: 50px;
+  background-image: url("../images/backgrounds/c_image.jpg");
+  height: 750px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+
+.contact-form{
+  text-align: center;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.contact-title{
+  padding-top: 50px;
+  margin-bottom: 50px;
+  font-size: 40px;
+  color: white;
+}
+
+.form-control{
+  background: transparent;
+  border: 1px solid white;
+}
+
+.form-control::placeholder{
+  color: white;
 }
