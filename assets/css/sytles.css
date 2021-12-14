@@ -19,6 +19,21 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Navigation Bar */
+.nav{
+  margin-right: 2.5%;
+}
+
+.nav-link{
+  color: white;
+}
+
+.nav-link:hover{
+  color: orange;
+}
+
+
+/* Main page content*/
 .componets{
   text-align: center;
   position: absolute;
@@ -38,22 +53,6 @@
 .greeting{
   margin-top: 30px;
   margin-bottom: 30px;
-}
-
-.nav{
-  margin-right: 2.5%;
-}
-
-.nav-link{
-  color: white;
-}
-
-.nav-link:hover{
-  color: orange;
-}
-
-.nav li .active a{
-  background-color: orange;
 }
 
 .tagline{
@@ -79,4 +78,22 @@ h1 span{
   color: white;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 5px 20px 5px 20px;
+}
+
+/* About us*/
+#about-us{
+  position: relative;
+}
+
+.abt-title{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.abt-content{
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
 }
