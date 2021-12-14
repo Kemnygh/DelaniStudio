@@ -132,11 +132,18 @@ h1 span{
 }
 
 .wwd-title{
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: center;
   font-size: 40px;
 }
 
 .svc-items div{
+  margin-top: 20px;
 text-align: center;
+}
+
+.svc-icons{
+  height: 85px;
+  width: 80px;
+  margin-bottom: 10px;
 }

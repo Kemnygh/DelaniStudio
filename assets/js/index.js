@@ -2,6 +2,7 @@ $('document').ready(()=>{
   active();
   animateLogo();
   animateParagraph();
+  toggleService();
 
   
 
@@ -48,4 +49,10 @@ function animateParagraph(){
   // $('.tagline').on('anim4',()=>{$('.tagline').hide('slow',()=>{$('.tagline').trigger('anim1')})});
 
   $('.tagline').trigger('appear')
+}
+
+function toggleService(){
+  $('.design').click(()=>{
+    $('.design-icon').toggle();
+  })
 }
