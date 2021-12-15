@@ -234,10 +234,37 @@ h1 span{
 }
 
 .form-control{
-  background: transparent;
+  background: rgba(255, 255, 255, 0.2);
   border: 1px solid white;
 }
 
 .form-control::placeholder{
   color: white;
+}
+
+/* Footer------------------------------------------------------*/
+
+#footer{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.social-media{
+  margin: auto;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.social-icons{
+  max-width: 70px;
+ 
+}
+
+.signage{
+  margin-top: 50px;
+}
+
+.signage p{
+  margin: 0px;
+  font-weight: 500;
 }

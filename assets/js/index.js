@@ -55,4 +55,8 @@ function toggleService(){
   $('.design').click(()=>{
     $('.design-icon').toggle();
   })
+
+  $('.btn').click((e)=>{
+    e.preventDefault();
+  })
 }
