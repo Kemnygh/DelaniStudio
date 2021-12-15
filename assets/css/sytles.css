@@ -153,6 +153,22 @@ h1 span{
   font-weight: 500;
 }
 
+hr {
+  border: none;
+  border-top: 1px double #333;
+  color: rgb(170, 10, 10);
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr:after {
+  background: #fff;
+  content: '§';
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
 
 .svc-icons{
   height: 85px;
@@ -169,8 +185,12 @@ h1 span{
 
 }
 
-.wwd-grp{
+.design-grp, .dev-grp, .prod-grp{
   display: none;
+  border: 1px solid rgb(201, 197, 197);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(189, 186, 186, 0.5);
 }
 
 /* Portfolio------------------------------------------------------*/
@@ -285,7 +305,8 @@ h1 span{
 }
 
 .signage{
-  margin-top: 50px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .signage p{
