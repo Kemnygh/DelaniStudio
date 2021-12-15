@@ -138,15 +138,39 @@ h1 span{
   font-size: 40px;
 }
 
+.svc-items{
+  margin: auto;
+  max-width: 1600px;
+  justify-content: space-around;
+}
+
 .svc-items div{
   margin-top: 20px;
   text-align: center;
 }
 
+.head-title{
+  font-weight: 500;
+}
+
+
 .svc-icons{
   height: 85px;
   width: 80px;
   margin-bottom: 10px;
+}
+
+.icon-style{
+  background: #4d4848;
+  padding: 3px 7px 3px 7px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+
+}
+
+.wwd-grp{
+  display: none;
 }
 
 /* Portfolio------------------------------------------------------*/

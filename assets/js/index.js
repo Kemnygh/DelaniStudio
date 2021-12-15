@@ -53,7 +53,13 @@ function animateParagraph(){
 
 function toggleService(){
   $('.design').click(()=>{
-    $('.design-icon').toggle();
+    $('.design-icon').toggle(500);
+    $('.design-text').toggle(500);
+
+
+    // $('.design').append('<p>Our design practice offers a full range of services including brand strategy, interaction and visual design and user experience testing.</p>');
+      // $('.design').append('<p>Throughout your project, our designers create and implement visual design and workflows, solicit user feedback and work with you to make sure what gets built is what is needed.</p>');
+    
   })
 
   $('.btn').click((e)=>{
