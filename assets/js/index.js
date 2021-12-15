@@ -75,9 +75,7 @@ function toggleService(){
 }
 
 function userInput(){
-  var myStorage = window.localStorage;
-
-  $('.contact-form').submit((e)=>{
+   $('.contact-form').submit((e)=>{
     e.preventDefault();
     var nameInput = $('#name').val();
     var emailInput = $('#email').val();
@@ -93,7 +91,7 @@ function userInput(){
     var errorTag = [nameError,emailError,msgError]
     var errors = ['Please enter your name','Please enter your email','Please enter your message'];
 
-   var inputData = ''
+   var inputData = []
     
     for(var i = 0; i < errors.length; i++ ){
       if(inputs[i] === ''){
@@ -102,14 +100,15 @@ function userInput(){
       }else{
         errorTag[i].text('')
         inputTag[i].removeClass('input-area')
-        inputData += inputs[i]+'|'
+        inputData.push(inputs[i])
        
     }
     } 
     if(nameInput !=='' && emailInput !== '' && msgInput !== ''){
-      console.log(inputData)
-    // myStorage.setItem($.now(),inputData)
-  }
+      $('.alert').show();
+      $('.alert-span').text('Thank you '+inputData[0]+' for reaching out to us, your message has been well received, we will get back to you promptly.');
+      $('.contact-form')[0].reset();
+    }
     
   });
 }
