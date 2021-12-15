@@ -3,6 +3,7 @@ $('document').ready(()=>{
   animateLogo();
   animateParagraph();
   toggleService();
+  userInput();
 
   
 
@@ -41,15 +42,12 @@ function animateParagraph(){
   $('.tagline').on('disappear',()=>{
     $('.tagline').fadeOut(4000,()=>{
       $('.tagline').trigger('appear')})});
-      
+
   $('.tagline').on('appear',()=>{
     $('.tagline').fadeIn(2000,()=>{
       $('.tagline').trigger('disappear')
     });
   });
-  // $('.tagline').on('anim2',()=>{$('.tagline').stop(false,()=>{$('.tagline').trigger('anim3')})});
-  // $('.tagline').on('anim3',()=>{$('.tagline').animate({left:"82%"},"slow",()=>{$('.tagline').trigger('anim4')})});
-  // $('.tagline').on('anim4',()=>{$('.tagline').hide('slow',()=>{$('.tagline').trigger('anim1')})});
 
   $('.tagline').trigger('appear')
 }
@@ -59,21 +57,59 @@ function toggleService(){
     $('.design-icon').toggle();
     $('.design-text').toggle();
     $('.design-grp').toggle()    
-  })
+  });
 
   $('.dev').click(()=>{
     $('.dev-icon').toggle();
     $('.dev-text').toggle();
     $('.dev-grp').toggle()    
-  })
+  });
 
   $('.prod').click(()=>{
     $('.prod-icon').toggle();
     $('.prod-text').toggle();
     $('.prod-grp').toggle()    
-  })
+  });
 
-  $('.btn').click((e)=>{
+ 
+}
+
+function userInput(){
+  var myStorage = window.localStorage;
+
+  $('.contact-form').submit((e)=>{
     e.preventDefault();
-  })
+    var nameInput = $('#name').val();
+    var emailInput = $('#email').val();
+    var msgInput = $('#msg').val();
+    var name = $('#name')
+    var email = $('#email')
+    var msg = $('#msg')
+    var nameError = $('.name-valid')
+    var emailError = $('.email-valid')
+    var msgError = $('.msg-valid')
+    var inputTag = [name,email,msg];
+    var inputs = [nameInput,emailInput,msgInput];
+    var errorTag = [nameError,emailError,msgError]
+    var errors = ['Please enter your name','Please enter your email','Please enter your message'];
+
+   var inputData = ''
+    
+    for(var i = 0; i < errors.length; i++ ){
+      if(inputs[i] === ''){
+        errorTag[i].text(errors[i])
+        inputTag[i].addClass('input-area')
+      }else{
+        errorTag[i].text('')
+        inputTag[i].removeClass('input-area')
+        inputData += inputs[i]+'|'
+       
+    }
+    } 
+    if(nameInput !=='' && emailInput !== '' && msgInput !== ''){
+      console.log(inputData)
+    // myStorage.setItem($.now(),inputData)
+  }
+    
+  });
 }

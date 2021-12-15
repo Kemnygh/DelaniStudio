@@ -280,12 +280,24 @@ hr:after {
 .form-control{
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid white;
+  color: white;
+}
+
+.input-area{
+  border: 1px solid red;
 }
 
 .form-control::placeholder{
   color: white;
 }
 
+.name-valid, .email-valid, .msg-valid{
+  font-weight: 400;
+  float: left;
+  color: red;
+  
+
+}
 /* Footer------------------------------------------------------*/
 
 #footer{

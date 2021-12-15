@@ -137,13 +137,16 @@
     <div class="row">
       <div class="col-md-6 mt-3">
         <input id="name" type="text" class="form-control" placeholder="Name" aria-label="name">
+        <p class="error-msg name-valid"></p>
       </div>
       <div class="col-md-6 mt-3">
         <input id="email" type="email" class="form-control" placeholder="Email" aria-label="email">
+        <p class="error-msg email-valid"></p>
       </div>
     </div>
     <div class="mb-3 mt-3">
-      <textarea id="msg" class="form-control" id="exampleFormControlTextarea1" placeholder="Your text here" rows="10"></textarea>
+      <textarea id="msg" class="form-control" id="exampleFormControlTextarea1" placeholder="Your message here" rows="10"></textarea>
+      <p class="error-msg msg-valid"></p>
     </div>
     <div class="col-auto">
       <button type="submit" class="btn btn-warning">Submit</button>
