@@ -133,7 +133,7 @@
 </div>
 <div id="contact">
   <p class="contact-title"><i class="bi bi-envelope-open-fill"> </i>CONTACT US</p>
-  <form class="contact-form" action="">
+  <form class="contact-form" action="POST">
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <p class="alert-text"><i class="bi bi-check-circle-fill"></i>  <span class="alert-span"></span></p>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="padding: 25px 20px 0 0;"></button>
@@ -144,7 +144,7 @@
         <p class="error-msg name-valid"></p>
       </div>
       <div class="col-md-6 mt-3">
-        <input id="email" type="email" class="form-control" placeholder="Email" aria-label="email">
+        <input id="email" type="email" class="form-control" placeholder="Email" aria-label="email" pattern="[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+(\.[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+)*@([a-zA-Z0-9_][-a-zA-Z0-9_]*(\.[-a-zA-Z0-9_]+)*\.([cC][oO][mM]))(:[0-9]{1,5})?" maxlength="64">
         <p class="error-msg email-valid"></p>
       </div>
     </div>

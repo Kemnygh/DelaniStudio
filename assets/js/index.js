@@ -140,9 +140,27 @@ function userInput(){
     } 
     if(nameInput !=='' && emailInput !== '' && msgInput !== ''){
       $('.alert').show();
-      $('.alert-span').text('Thank you '+inputData[0]+' for reaching out to us, your message has been well received, we will get back to you promptly.');
+      
       $('.contact-form')[0].reset();
+
+      let fetchdata = {
+        method: 'POST',
+        body: JSON.stringify({clientName: nameInput,clientEmail: emailInput, text: msgInput, js: true}),
+        headers: {"content-Type": "application/json"}
+      }
+      fetch('/contact', fetchdata)
+        .then(res =>{
+          if(res.ok){
+            $('.alert-span').text('Thank you '+inputData[0]+' for reaching out to us, your message has been well received, we will get back to you promptly.');
+          }else{
+            console.log("there's a problem")
+          }
+        })
     }
     
   });
+}
+
+function mail(){
+
 }
