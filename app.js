@@ -20,8 +20,6 @@ app.post('/contact', (req, res)=>{
     members: [
       {
         email_address: clientEmail,
-        name: clientName,
-        message: text,
         status: 'pending'
       }
     ]

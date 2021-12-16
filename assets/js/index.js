@@ -5,7 +5,7 @@ $('document').ready(()=>{
   toggleService();
   highlighter()
   userInput();
-
+  filter();
   
 
 });
@@ -17,7 +17,7 @@ function active(){
 function color() {
   for(var i = 0; i < navlink.length; i++){
     if(this != navlink[i]){
-      navlink[i].style.color = "white";
+      navlink[i].style.color = "#cec8c8";
     }else{
       navlink[i].style.color = "orange";
     }
@@ -140,7 +140,7 @@ function userInput(){
     } 
     if(nameInput !=='' && emailInput !== '' && msgInput !== ''){
       $('.alert').show();
-      
+      $('.alert-span').text('Thank you '+inputData[0]+' for reaching out to us, your message has been well received, we will get back to you promptly.');
       $('.contact-form')[0].reset();
 
       let fetchdata = {
@@ -149,18 +149,73 @@ function userInput(){
         headers: {"content-Type": "application/json"}
       }
       fetch('/contact', fetchdata)
-        .then(res =>{
-          if(res.ok){
-            $('.alert-span').text('Thank you '+inputData[0]+' for reaching out to us, your message has been well received, we will get back to you promptly.');
-          }else{
-            console.log("there's a problem")
-          }
-        })
+        // .then(res =>{
+        //   if(res.ok){
+            
+        //   }else{
+        //     console.log("there's a problem")
+        //   }
+        // })
     }
     
   });
 }
 
-function mail(){
+function filter(){
+  var items = $('.filter-item');
+  var projects = $('.pflo-img');
+  var website = $('.website');
+  var app = $('.app');
+  var graphics = $('.graphics');
+  var logos = $('.logos');
 
+  items.each(function(i){
+    $(this).click(function(){
+      if(this === items[i]){
+        $(this).addClass('filter-bold')
+        $(this).css("text-decoration","underline")
+        items.each(function(e){
+          if(i !== e){
+            $(this).removeClass('filter-bold')
+            $(this).css("text-decoration","none")
+          }
+        })
+      }
+    })
+   })
+
+  $('.filter-logo').click(function(){
+    website.hide();
+    app.hide();
+    graphics.hide();
+    logos.show()
+  })
+
+  $('.filter-websites').click(function(){
+    logos.hide();
+    app.hide();
+    graphics.hide();
+    website.show();
+  })
+
+  $('.filter-app').click(function(){
+    website.hide();
+    logos.hide();
+    graphics.hide();
+    app.show();
+  })
+
+  $('.filter-graphics').click(function(){
+    website.hide();
+    app.hide();
+    logos.hide();
+    graphics.show();
+  })
+
+  $('.filter-all').click(function(){
+    website.show();
+    app.show();
+    graphics.show();
+    logos.show();
+  })
 }
