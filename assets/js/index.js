@@ -3,6 +3,7 @@ $('document').ready(()=>{
   animateLogo();
   animateParagraph();
   toggleService();
+  highlighter()
   userInput();
 
   
@@ -56,22 +57,55 @@ function toggleService(){
   $('.design').click(()=>{
     $('.design-icon').toggle();
     $('.design-text').toggle();
-    $('.design-grp').toggle()    
+    $('.design-grp').toggle();  
   });
 
   $('.dev').click(()=>{
     $('.dev-icon').toggle();
     $('.dev-text').toggle();
-    $('.dev-grp').toggle()    
+    $('.dev-grp').toggle();   
   });
 
   $('.prod').click(()=>{
     $('.prod-icon').toggle();
     $('.prod-text').toggle();
-    $('.prod-grp').toggle()    
+    $('.prod-grp').toggle(); 
   });
 
  
+}
+
+function highlighter(){
+  var portfolios = $('.work-img')
+  var labels =  $('.pflo-img-div')
+
+   labels.each(function(i){
+    $(this).mouseenter(()=>{
+      $(this).removeClass('transparent')
+      if(this === labels[i]){
+        portfolios.each(function(e){
+          if(i === e){
+          $(this).addClass('dark-shade')
+          }
+        });
+      }
+    });
+    
+    $(this).mouseleave(()=>{
+      $(this).addClass('transparent')
+      if(this === labels[i]){
+        portfolios.each(function(e){
+          if(i === e){
+          $(this).removeClass('dark-shade')
+          }
+        });
+      }
+    });
+  });
+
+  
+  
+
 }
 
 function userInput(){

@@ -223,6 +223,7 @@ hr:after {
   border: 1px solid rgb(214, 208, 208);
   max-width: 350px;
   box-shadow: 5px 8px rgba(0, 0, 0, 0.3);
+  
 }
 .work-img{
   max-width: 300px;
@@ -248,7 +249,13 @@ hr:after {
   padding-left: 10px;
 }
 
-.giraffe{
+.transparent{
+  border: 3px solid transparent;
+  color: transparent;
+
+}
+
+.dark-shade{
   filter: brightness(20%);
 }
 
@@ -272,7 +279,7 @@ hr:after {
 
 .contact-title{
   padding-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   font-size: 40px;
   color: white;
 }
