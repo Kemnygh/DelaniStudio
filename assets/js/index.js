@@ -143,19 +143,19 @@ function userInput(){
       $('.alert-span').text('Thank you '+inputData[0]+' for reaching out to us, your message has been well received, we will get back to you promptly.');
       $('.contact-form')[0].reset();
 
-      let fetchdata = {
-        method: 'POST',
-        body: JSON.stringify({clientName: nameInput,clientEmail: emailInput, text: msgInput, js: true}),
-        headers: {"content-Type": "application/json"}
-      }
-      fetch('/contact', fetchdata)
-        // .then(res =>{
-        //   if(res.ok){
+      // let fetchdata = {
+      //   method: 'POST',
+      //   body: JSON.stringify({clientName: nameInput,clientEmail: emailInput, text: msgInput, js: true}),
+      //   headers: {"content-Type": "application/json"}
+      // }
+      // fetch('/contact', fetchdata)
+      //   // .then(res =>{
+      //   //   if(res.ok){
             
-        //   }else{
-        //     console.log("there's a problem")
-        //   }
-        // })
+      //   //   }else{
+      //   //     console.log("there's a problem")
+      //   //   }
+      //   // })
     }
     
   });
@@ -163,7 +163,6 @@ function userInput(){
 
 function filter(){
   var items = $('.filter-item');
-  var projects = $('.pflo-img');
   var website = $('.website');
   var app = $('.app');
   var graphics = $('.graphics');

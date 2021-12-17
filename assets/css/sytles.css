@@ -22,7 +22,6 @@
 
 /* Navigation Bar------------------------------------------------------ */
 .nav{
-  margin-right: 2.5%;
   position: fixed;
   z-index: 1;
   left: 2.5%;
@@ -36,6 +35,26 @@
   color: orange;
 }
 
+@media screen and (max-width: 508px){
+  .nav{
+    display: none;
+  }
+
+  .bi-filter-square-fill{
+    position: fixed;
+    z-index: 1;
+    color: #999797;
+    font-size: 40px;
+    margin-left: 20px;
+    /* margin-top: 30px; */
+  }
+}
+
+@media screen and (min-width: 508px){
+  .bi-filter-square-fill{
+    display: none;
+}
+}
 
 /* Main page content------------------------------------------------------*/
 .componets{

@@ -28,10 +28,10 @@ app.post('/contact', (req, res)=>{
   const mcDataPost = JSON.stringify(mcData);
 
   const options = {
-    url: 'https://us20.api.mailchimp.com/3.0/lists/55dc719ac5',
+    url: '',
     method: 'POST',
     headers: {
-      Authorization: 'auth 0705b7e8db328d67312e7012d25929e8-us20'
+      Authorization: 'auth '
     },
     body: mcDataPost
   }
