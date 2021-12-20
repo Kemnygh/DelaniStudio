@@ -103,7 +103,7 @@ h1 span{
   padding: 5px 20px 5px 20px;
 }
 
-/* About us*/
+/* About us -------------------------------------------------------------------*/
 #about-us{
   position: relative;
   height: 300px;
@@ -123,6 +123,47 @@ h1 span{
   margin-bottom: 30%;
 
 }
+
+@media screen and (max-width: 950px){
+  #about-us{
+    height: 350px;
+  }
+
+  .abt-content{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 730px){
+  #about-us{
+    height: 400px;
+  }
+
+  .abt-content{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 510px){
+  #about-us{
+    height: 450px;
+  }
+
+  .abt-content{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 430px){
+  #about-us{
+    height: 500px;
+  }
+
+  .abt-content{
+    font-size: 12px;
+  }
+}
+
 
 /* Services---------------------------------------------------------------*/
 #sevices{
@@ -214,6 +255,26 @@ hr:after {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px rgba(189, 186, 186, 0.5);
+}
+
+@media screen and (max-width: 600px){
+  .svc-banner{
+    height: 450px;
+  }
+
+  .svc-notes{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .svc-banner{
+    height: 500px;
+  }
+
+  .svc-notes{
+    font-size: 14px;
+  }
 }
 
 /* Portfolio------------------------------------------------------*/
