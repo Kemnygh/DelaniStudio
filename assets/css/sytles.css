@@ -293,8 +293,6 @@ hr:after {
 .workflow{
   margin: auto;
   max-width: 1900px;
-  
-
 }
 
 .workflow-one, .workflow-two{
@@ -336,7 +334,6 @@ hr:after {
 .transparent{
   border: 3px solid transparent;
   color: transparent;
-
 }
 
 .dark-shade{
@@ -347,7 +344,6 @@ hr:after {
   max-width: 1200px;
   margin: auto;
   justify-content: center;
-
 }
 
 .filter p{
@@ -440,7 +436,6 @@ hr:after {
 
 .social-icons{
   max-width: 70px;
- 
 }
 
 .signage{
